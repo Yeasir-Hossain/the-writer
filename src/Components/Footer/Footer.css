@@ -1,8 +1,7 @@
 .footer {
-    position: absolute;
-    left: 0;
+    position: sticky;
     bottom: 0;
-    height: 60px;
+    height: 80px;
     width: 100%;
     overflow: hidden;
 }
