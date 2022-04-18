@@ -10,7 +10,7 @@ const Footer = () => {
         <footer className='text-center text-white bg-dark mt-5 footer d-flex flex-column justify-content-center align-items-center'>
             <p className='mb-0'>All rights reserved</p>
             <p className='mb-0'><small>Copyright <FontAwesomeIcon icon={faCopyright} /> {year} </small></p>
-        </footer>
+        </footer>       
     );
 };
 

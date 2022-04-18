@@ -65,7 +65,7 @@ const SignUp = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
                 <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
-                <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Genius Car Terms and Conditions</label>
+                <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Agree to Terms and Conditions</label>
                 <Button  disabled={!agree} variant="dark w-50 mx-auto my-3 d-block mb-2" type="submit">
                     SignUp
                 </Button>

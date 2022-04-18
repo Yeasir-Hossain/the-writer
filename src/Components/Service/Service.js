@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import ServiceDetail from '../ServiceDetail/ServiceDetail';
 import './Service.css';
 
 const Service = ({ service }) => {
@@ -8,6 +9,7 @@ const Service = ({ service }) => {
     const navigate = useNavigate();
 
     const navigateToServiceDetail = id => {
+        <ServiceDetail key={service.id} service={service}></ServiceDetail>
         navigate(`/service/${id}`);
     }
     return (
