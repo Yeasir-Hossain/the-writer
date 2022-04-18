@@ -28,7 +28,7 @@ const Login = () => {
     if (loading || sending) {
         return <Loading></Loading>
     }
-    
+
     if (user) {
         navigate(from, { replace: true });
     }
@@ -76,8 +76,8 @@ const Login = () => {
                 </Button>
             </Form>
             {errorElement}
-            <p>New to Genius Car? <Link to="/signup" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
-            <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+            <p>New to Genius Car? <Link to="/signup" className='text-primary pe-auto text-decoration-none mt-2' onClick={navigateRegister}>Please Register</Link> </p>
+            <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none mt-0' onClick={resetPassword}>Reset Password</button> </p>
             <ToastContainer />
         </div>
     );

@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
-import { Button, Form, ToastContainer } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import Social from '../Social/Social';
 
 
@@ -16,7 +16,6 @@ const SignUp = () => {
     let errorElement;
     const [
         createUserWithEmailAndPassword,
-        user,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -28,15 +27,12 @@ const SignUp = () => {
         navigate('/login');
     }
 
-    if (loading || updating) {
-        return <Loading></Loading>
-    }
+
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
-
-    if (user) {
-        console.log('user', user);
+    if (loading || updating) {
+        return <Loading></Loading>
     }
 
     const handleRegister = async (event) => {
@@ -44,11 +40,12 @@ const SignUp = () => {
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        console.log('Updated profile');
-        navigate('/home');
+        if(!error){
+            navigate('/home');
+        }
+        
     }
     return (
         <div className='container w-50 mx-auto'>
@@ -66,13 +63,12 @@ const SignUp = () => {
                 </Form.Group>
                 <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
                 <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Agree to Terms and Conditions</label>
-                <Button  disabled={!agree} variant="dark w-50 mx-auto my-3 d-block mb-2" type="submit">
+                <Button disabled={!agree} variant="dark w-50 mx-auto my-3 d-block mb-2" type="submit">
                     SignUp
                 </Button>
             </Form>
             {errorElement}
             <p>Already a user? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Register</Link> </p>
-            <ToastContainer />
         </div>
     );
 };
