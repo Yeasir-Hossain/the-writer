@@ -29,7 +29,7 @@ const SignUp = () => {
 
 
     if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+        errorElement = <p className='text-danger'>Error signing up</p>
     }
     if (loading || updating) {
         return <Loading></Loading>
