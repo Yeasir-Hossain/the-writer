@@ -3,21 +3,21 @@
         "id": 1,
         "name": "Social Media Posts",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Description of your posts,captions,aesthetic poems",
         "img": "https://i.ibb.co/9HkNWyq/socialmedia.png"
     },
     {
         "id": 2,
         "name": "Presentation",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Every section of your presentation will shine like a star.",
         "img": "https://i.ibb.co/86rgJWw/Presentation.png"
     },
     {
         "id": 3,
         "name": "Facebook Ads",
         "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "Description of your products to attract customers",
         "img": "https://i.ibb.co/x7yTq5Y/fb-ads.png"
     }
 ]

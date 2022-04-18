@@ -42,7 +42,7 @@ const SignUp = () => {
         const password = passwordRef.current.value;
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        if(!error){
+        if(error){
             navigate('/home');
         }
         
@@ -53,7 +53,7 @@ const SignUp = () => {
             <Social></Social>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control ref={nameRef} type="text" placeholder="Enter Name" required />
+                    <Form.Control ref={nameRef} type="text" placeholder="Enter Name" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
