@@ -1,20 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+import Home from './Components/Home/Home';
+import About from './Components/About/About';
 import Blogs from './Components/Blogs/Blogs';
 import Checkout from './Components/Checkout/Checkout';
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
-import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import ServiceDetail from './Components/ServiceDetail/ServiceDetail';
 import SignUp from './Components/SignUp/SignUp';
-import About from './Pages/About/About';
-
-
-
-
-
 
 
 function App() {
