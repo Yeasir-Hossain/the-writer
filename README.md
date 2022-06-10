@@ -8,6 +8,7 @@ And at least five bullet points mentioning your website's different features and
 - carousel
 - Signin with email and password
 - Signin with Google
+- Have a list of services provided and the price
 
 ## Technologies
 - React Bootstrap
